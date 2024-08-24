@@ -16,7 +16,7 @@ jobs:
       - name: Generate Snake Animation
         uses: Platane/snk@v3.0.0
         with:
-          github_user_name: niska322 
+          github_user_name: nishka322 
           outputs: dist/snake.svg
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
