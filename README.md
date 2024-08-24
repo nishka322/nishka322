@@ -1,6 +1,5 @@
 ## C++ Code Example
 
-Here's an example of a C++ class that represents a GitHub profile and prints some information about it:
 
 ```cpp
 #include <iostream>
