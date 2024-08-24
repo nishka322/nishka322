@@ -44,4 +44,5 @@ int main() {
 
 ### Watch the snake eat my contributions:
 
-![snake gif](https://github.com/nishka322/nishka322/blob/output/snake.svg)
+![snake gif](https://github.com/nishka322/nishka322/raw/output/snake.svg)
+
