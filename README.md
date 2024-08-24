@@ -41,3 +41,7 @@ int main() {
     me.about();
     return 0;
 }
+
+### Watch the snake eat my contributions:
+
+![snake gif](https://github.com/nishka322/nishka322/blob/output/snake.svg)
