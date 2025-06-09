@@ -1,4 +1,4 @@
-## C++ Code Example
+## About
 
 ```cpp
 #include <iostream>
