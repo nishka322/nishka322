@@ -7,22 +7,21 @@
 
 class GitHubProfile {
 public:
-    GitHubProfile(std::string uname, std::string name, std::string lang, std::vector<std::string> stack, std::string location, std::string status)
-            : username(uname), name(name), language(lang), stack(stack), location(location), status(status) {}
+    GitHubProfile(std::string uname, std::string name, std::string lang, std::vector<std::string> stack, std::string focus)
+        : username(uname), name(name), language(lang), stack(stack), focus(focus) {}
 
     void about() const {
-        std::cout << "Привет, меня зовут " << name << ", или " << username << " на GitHub." << std::endl;
-        std::cout << "Я более 10 лет занимаюсь написанием технической документации и люблю делиться знаниями." << std::endl;
-        std::cout << "В свободное время я практикуюсь в различных языках программирования, хотя мой основной стек для написания документации включает: ";
+        std::cout << "Привет! Меня зовут " << name << ", на GitHub я известен как " << username << "." << std::endl;
+        std::cout << "Я более 10 лет занимаюсь технической документацией и обожаю делиться знаниями." << std::endl;
+        std::cout << "Здесь демо-проекты, тестовые решения и идеи, которые я реализовал на практике." << std::endl;
+        std::cout << "Мой основной стек для решения прикладных задач документирования: ";
         for (size_t i = 0; i < stack.size(); ++i) {
             std::cout << stack[i];
-            if (i < stack.size() - 1) {
-                std::cout << ", ";
-            }
+            if (i < stack.size() - 1) std::cout << ", ";
         }
         std::cout << "." << std::endl;
-        std::cout << "Если вы хотите увидеть мои достижения в программировании, вы можете ознакомиться с моими публичными репозиториями на GitHub." << std::endl;
-        std::cout << "Я также рассматриваю предложения на проекты в области DaC (Data as Code), так что не стесняйтесь связаться со мной!" << std::endl;
+        std::cout << "Основная работа это обеспечение " << focus << " проектов." << std::endl;
+        std::cout << "Заглядывайте в репозитории — может, найдёте что-то полезное или вдохновляющее." << std::endl;
     }
 
 private:
@@ -30,14 +29,13 @@ private:
     std::string name;
     std::string language;
     std::vector<std::string> stack;
-    std::string location;
-    std::string status;
+    std::string focus;
 };
 
 int main() {
-    system("chcp 65001"); // Set code page to UTF-8
-    std::vector<std::string> stack = {"Markdown", "XML", "HTML", "CSS"};
-    GitHubProfile me("Nishka", "Макс", "Русский", stack, "РФ", "Рассматриваю предложения на проекты DaC");
-    me.about();
+    system("chcp 65001");
+    std::vector<std::string> stack = {"Java", "JS", "TS", "Phyton", "CSS"};
+    GitHubProfile profile("Nishka", "Макс", "Русский", stack, "DocOps");
+    profile.about();
     return 0;
 }
